@@ -5,7 +5,7 @@ from setuptools import setup, Command, find_packages
 
 # Pull version from source without importing
 # since we can't import something we haven't built yet :)
-exec(open('kafka3/version.py').read())
+exec(open('kafka/version.py').read())
 
 
 class Tox(Command):
@@ -33,8 +33,7 @@ with open(os.path.join(here, 'README.rst')) as f:
 
 setup(
     name="kafka-python3",
-    version=__version__,
-
+    version='3.0.0.dev0',
     tests_require=test_require,
     extras_require={
         "crc32c": ["crc32c"],
