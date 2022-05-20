@@ -7,7 +7,7 @@ KafkaConsumer
 
 .. code:: python
 
-    from kafka import KafkaConsumer
+    from kafka3 import KafkaConsumer
 
     # To consume latest messages and auto-commit offsets
     consumer = KafkaConsumer('my-topic',
@@ -26,7 +26,7 @@ KafkaConsumer
     # consume json messages
     KafkaConsumer(value_deserializer=lambda m: json.loads(m.decode('ascii')))
 
-    # consume msgpack 
+    # consume msgpack
     KafkaConsumer(value_deserializer=msgpack.unpackb)
 
     # StopIteration if no message after 1sec
@@ -55,7 +55,7 @@ KafkaProducer
 
 .. code:: python
 
-    from kafka import KafkaProducer
+    from kafka3 import KafkaProducer
     from kafka.errors import KafkaError
 
     producer = KafkaProducer(bootstrap_servers=['broker1:1234'])
@@ -100,7 +100,7 @@ KafkaProducer
         log.error('I am an errback', exc_info=excp)
         # handle exception
 
-    # produce asynchronously with callbacks 
+    # produce asynchronously with callbacks
     producer.send('my-topic', b'raw_bytes').add_callback(on_send_success).add_errback(on_send_error)
 
     # block until all async messages are sent

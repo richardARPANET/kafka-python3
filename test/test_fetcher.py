@@ -7,21 +7,21 @@ from collections import OrderedDict
 import itertools
 import time
 
-from kafka.client_async import KafkaClient
-from kafka.consumer.fetcher import (
+from kafka3.client_async import KafkaClient
+from kafka3.consumer.fetcher import (
     CompletedFetch, ConsumerRecord, Fetcher, NoOffsetForPartitionError
 )
-from kafka.consumer.subscription_state import SubscriptionState
-from kafka.future import Future
-from kafka.metrics import Metrics
-from kafka.protocol.fetch import FetchRequest, FetchResponse
-from kafka.protocol.offset import OffsetResponse
-from kafka.errors import (
+from kafka3.consumer.subscription_state import SubscriptionState
+from kafka3.future import Future
+from kafka3.metrics import Metrics
+from kafka3.protocol.fetch import FetchRequest, FetchResponse
+from kafka3.protocol.offset import OffsetResponse
+from kafka3.errors import (
     StaleMetadata, LeaderNotAvailableError, NotLeaderForPartitionError,
     UnknownTopicOrPartitionError, OffsetOutOfRangeError
 )
-from kafka.record.memory_records import MemoryRecordsBuilder, MemoryRecords
-from kafka.structs import OffsetAndMetadata, TopicPartition
+from kafka3.record.memory_records import MemoryRecordsBuilder, MemoryRecords
+from kafka3.structs import OffsetAndMetadata, TopicPartition
 
 
 @pytest.fixture

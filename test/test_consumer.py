@@ -1,7 +1,7 @@
 import pytest
 
-from kafka import KafkaConsumer
-from kafka.errors import KafkaConfigurationError
+from kafka3 import KafkaConsumer
+from kafka3.errors import KafkaConfigurationError
 
 
 class TestKafkaConsumer:

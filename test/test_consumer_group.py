@@ -4,12 +4,12 @@ import threading
 import time
 
 import pytest
-from kafka.vendor import six
+from kafka3.vendor import six
 
-from kafka.conn import ConnectionStates
-from kafka.consumer.group import KafkaConsumer
-from kafka.coordinator.base import MemberState
-from kafka.structs import TopicPartition
+from kafka3.conn import ConnectionStates
+from kafka3.consumer.group import KafkaConsumer
+from kafka3.coordinator.base import MemberState
+from kafka3.structs import TopicPartition
 
 from test.testutil import env_kafka_version, random_string
 

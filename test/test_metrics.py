@@ -3,13 +3,13 @@ import time
 
 import pytest
 
-from kafka.errors import QuotaViolationError
-from kafka.metrics import DictReporter, MetricConfig, MetricName, Metrics, Quota
-from kafka.metrics.measurable import AbstractMeasurable
-from kafka.metrics.stats import (Avg, Count, Max, Min, Percentile, Percentiles,
+from kafka3.errors import QuotaViolationError
+from kafka3.metrics import DictReporter, MetricConfig, MetricName, Metrics, Quota
+from kafka3.metrics.measurable import AbstractMeasurable
+from kafka3.metrics.stats import (Avg, Count, Max, Min, Percentile, Percentiles,
                                  Rate, Total)
-from kafka.metrics.stats.percentiles import BucketSizing
-from kafka.metrics.stats.rate import TimeUnit
+from kafka3.metrics.stats.percentiles import BucketSizing
+from kafka3.metrics.stats.rate import TimeUnit
 
 EPS = 0.000001
 

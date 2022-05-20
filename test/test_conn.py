@@ -7,12 +7,12 @@ import socket
 import mock
 import pytest
 
-from kafka.conn import BrokerConnection, ConnectionStates, collect_hosts
-from kafka.protocol.api import RequestHeader
-from kafka.protocol.metadata import MetadataRequest
-from kafka.protocol.produce import ProduceRequest
+from kafka3.conn import BrokerConnection, ConnectionStates, collect_hosts
+from kafka3.protocol.api import RequestHeader
+from kafka3.protocol.metadata import MetadataRequest
+from kafka3.protocol.produce import ProduceRequest
 
-import kafka.errors as Errors
+import kafka3.errors as Errors
 
 
 @pytest.fixture

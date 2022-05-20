@@ -4,5 +4,5 @@ from __future__ import absolute_import
 import logging
 logging.basicConfig(level=logging.INFO)
 
-from kafka.future import Future
+from kafka3.future import Future
 Future.error_on_callbacks = True  # always fail during testing

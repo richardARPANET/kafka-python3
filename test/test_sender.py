@@ -4,14 +4,14 @@ from __future__ import absolute_import
 import pytest
 import io
 
-from kafka.client_async import KafkaClient
-from kafka.cluster import ClusterMetadata
-from kafka.metrics import Metrics
-from kafka.protocol.produce import ProduceRequest
-from kafka.producer.record_accumulator import RecordAccumulator, ProducerBatch
-from kafka.producer.sender import Sender
-from kafka.record.memory_records import MemoryRecordsBuilder
-from kafka.structs import TopicPartition
+from kafka3.client_async import KafkaClient
+from kafka3.cluster import ClusterMetadata
+from kafka3.metrics import Metrics
+from kafka3.protocol.produce import ProduceRequest
+from kafka3.producer.record_accumulator import RecordAccumulator, ProducerBatch
+from kafka3.producer.sender import Sender
+from kafka3.record.memory_records import MemoryRecordsBuilder
+from kafka3.structs import TopicPartition
 
 
 @pytest.fixture

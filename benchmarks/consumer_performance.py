@@ -10,9 +10,9 @@ import sys
 import threading
 import traceback
 
-from kafka.vendor.six.moves import range
+from kafka3.vendor.six.moves import range
 
-from kafka import KafkaConsumer, KafkaProducer
+from kafka3 import KafkaConsumer, KafkaProducer
 from test.fixtures import KafkaFixture, ZookeeperFixture
 
 logging.basicConfig(level=logging.ERROR)

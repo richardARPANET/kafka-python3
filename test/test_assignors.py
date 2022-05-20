@@ -6,12 +6,12 @@ from random import randint, sample
 
 import pytest
 
-from kafka.structs import TopicPartition
-from kafka.coordinator.assignors.range import RangePartitionAssignor
-from kafka.coordinator.assignors.roundrobin import RoundRobinPartitionAssignor
-from kafka.coordinator.assignors.sticky.sticky_assignor import StickyPartitionAssignor, StickyAssignorUserDataV1
-from kafka.coordinator.protocol import ConsumerProtocolMemberAssignment, ConsumerProtocolMemberMetadata
-from kafka.vendor import six
+from kafka3.structs import TopicPartition
+from kafka3.coordinator.assignors.range import RangePartitionAssignor
+from kafka3.coordinator.assignors.roundrobin import RoundRobinPartitionAssignor
+from kafka3.coordinator.assignors.sticky.sticky_assignor import StickyPartitionAssignor, StickyAssignorUserDataV1
+from kafka3.coordinator.protocol import ConsumerProtocolMemberAssignment, ConsumerProtocolMemberMetadata
+from kafka3.vendor import six
 
 
 @pytest.fixture(autouse=True)

@@ -48,19 +48,19 @@ for API and configuration details.
 The consumer iterator returns ConsumerRecords, which are simple namedtuples
 that expose basic message attributes: topic, partition, offset, key, and value:
 
->>> from kafka import KafkaConsumer
+>>> from kafka3 import KafkaConsumer
 >>> consumer = KafkaConsumer('my_favorite_topic')
 >>> for msg in consumer:
 ...     print (msg)
 
 >>> # join a consumer group for dynamic partition assignment and offset commits
->>> from kafka import KafkaConsumer
+>>> from kafka3 import KafkaConsumer
 >>> consumer = KafkaConsumer('my_favorite_topic', group_id='my_favorite_group')
 >>> for msg in consumer:
 ...     print (msg)
 
 >>> # manually assign the partition list for the consumer
->>> from kafka import TopicPartition
+>>> from kafka3 import TopicPartition
 >>> consumer = KafkaConsumer(bootstrap_servers='localhost:1234')
 >>> consumer.assign([TopicPartition('foobar', 2)])
 >>> msg = next(consumer)
@@ -88,7 +88,7 @@ intended to operate as similarly as possible to the official java client.
 See <https://kafka-python.readthedocs.io/en/master/apidoc/KafkaProducer.html>
 for more details.
 
->>> from kafka import KafkaProducer
+>>> from kafka3 import KafkaProducer
 >>> producer = KafkaProducer(bootstrap_servers='localhost:1234')
 >>> for _ in range(100):
 ...     producer.send('foobar', b'some_message_bytes')

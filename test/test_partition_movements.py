@@ -1,6 +1,6 @@
-from kafka.structs import TopicPartition
+from kafka3.structs import TopicPartition
 
-from kafka.coordinator.assignors.sticky.partition_movements import PartitionMovements
+from kafka3.coordinator.assignors.sticky.partition_movements import PartitionMovements
 
 
 def test_empty_movements_are_sticky():

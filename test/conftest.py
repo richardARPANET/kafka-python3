@@ -127,9 +127,9 @@ def topic(kafka_broker, request):
 @pytest.fixture
 def conn(mocker):
     """Return a connection mocker fixture"""
-    from kafka.conn import ConnectionStates
-    from kafka.future import Future
-    from kafka.protocol.metadata import MetadataResponse
+    from kafka3.conn import ConnectionStates
+    from kafka3.future import Future
+    from kafka3.protocol.metadata import MetadataResponse
     conn = mocker.patch('kafka.client_async.BrokerConnection')
     conn.return_value = conn
     conn.state = ConnectionStates.CONNECTED

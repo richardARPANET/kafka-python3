@@ -2,7 +2,7 @@
 from __future__ import print_function
 import threading, logging, time
 
-from kafka import KafkaConsumer, KafkaProducer
+from kafka3 import KafkaConsumer, KafkaProducer
 
 msg_size = 524288
 

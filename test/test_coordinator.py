@@ -4,25 +4,25 @@ import time
 
 import pytest
 
-from kafka.client_async import KafkaClient
-from kafka.consumer.subscription_state import (
+from kafka3.client_async import KafkaClient
+from kafka3.consumer.subscription_state import (
     SubscriptionState, ConsumerRebalanceListener)
-from kafka.coordinator.assignors.range import RangePartitionAssignor
-from kafka.coordinator.assignors.roundrobin import RoundRobinPartitionAssignor
-from kafka.coordinator.assignors.sticky.sticky_assignor import StickyPartitionAssignor
-from kafka.coordinator.base import Generation, MemberState, HeartbeatThread
-from kafka.coordinator.consumer import ConsumerCoordinator
-from kafka.coordinator.protocol import (
+from kafka3.coordinator.assignors.range import RangePartitionAssignor
+from kafka3.coordinator.assignors.roundrobin import RoundRobinPartitionAssignor
+from kafka3.coordinator.assignors.sticky.sticky_assignor import StickyPartitionAssignor
+from kafka3.coordinator.base import Generation, MemberState, HeartbeatThread
+from kafka3.coordinator.consumer import ConsumerCoordinator
+from kafka3.coordinator.protocol import (
     ConsumerProtocolMemberMetadata, ConsumerProtocolMemberAssignment)
-import kafka.errors as Errors
-from kafka.future import Future
-from kafka.metrics import Metrics
-from kafka.protocol.commit import (
+import kafka3.errors as Errors
+from kafka3.future import Future
+from kafka3.metrics import Metrics
+from kafka3.protocol.commit import (
     OffsetCommitRequest, OffsetCommitResponse,
     OffsetFetchRequest, OffsetFetchResponse)
-from kafka.protocol.metadata import MetadataResponse
-from kafka.structs import OffsetAndMetadata, TopicPartition
-from kafka.util import WeakMethod
+from kafka3.protocol.metadata import MetadataResponse
+from kafka3.structs import OffsetAndMetadata, TopicPartition
+from kafka3.util import WeakMethod
 
 
 @pytest.fixture

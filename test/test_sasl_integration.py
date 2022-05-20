@@ -3,8 +3,8 @@ import uuid
 
 import pytest
 
-from kafka.admin import NewTopic
-from kafka.protocol.metadata import MetadataRequest_v1
+from kafka3.admin import NewTopic
+from kafka3.protocol.metadata import MetadataRequest_v1
 from test.testutil import assert_message_count, env_kafka_version, random_string, special_to_underscore
 
 

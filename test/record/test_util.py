@@ -1,6 +1,6 @@
 import struct
 import pytest
-from kafka.record import util
+from kafka3.record import util
 
 
 varint_data = [

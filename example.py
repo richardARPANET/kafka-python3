@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 import threading, time
 
-from kafka import KafkaAdminClient, KafkaConsumer, KafkaProducer
-from kafka.admin import NewTopic
+from kafka3 import KafkaAdminClient, KafkaConsumer, KafkaProducer
+from kafka3.admin import NewTopic
 
 
 class Producer(threading.Thread):

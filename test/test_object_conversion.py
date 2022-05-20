@@ -1,9 +1,9 @@
-from kafka.protocol.admin import Request
-from kafka.protocol.admin import Response
-from kafka.protocol.types import Schema
-from kafka.protocol.types import Array
-from kafka.protocol.types import Int16
-from kafka.protocol.types import String
+from kafka3.protocol.admin import Request
+from kafka3.protocol.admin import Response
+from kafka3.protocol.types import Schema
+from kafka3.protocol.types import Array
+from kafka3.protocol.types import Int16
+from kafka3.protocol.types import String
 
 import pytest
 
@@ -21,7 +21,7 @@ class TestObjectConversion:
         assert tc.get_item('myobject') == 0
         with pytest.raises(KeyError):
             tc.get_item('does-not-exist')
-        
+
     def test_with_empty_schema(self, superclass):
         class TestClass(superclass):
             API_KEY = 0
@@ -86,7 +86,7 @@ class TestObjectConversion:
                     ('subobject', Int16),
                     ('othersubobject', String('utf-8')))),
                 ('notarray', Int16))
-        
+
         tc = TestClass(
             myarray=[[10, 'hello']],
             notarray=42
@@ -165,7 +165,7 @@ class TestObjectConversion:
         assert myarray[1]['subarray'][0]['otherinnertest'] == 'hello again'
 
 def test_with_metadata_response():
-    from kafka.protocol.metadata import MetadataResponse_v5
+    from kafka3.protocol.metadata import MetadataResponse_v5
     tc = MetadataResponse_v5(
         throttle_time_ms=0,
         brokers=[
@@ -185,7 +185,7 @@ def test_with_metadata_response():
         ]]
     )
     tc.encode()  # Make sure this object encodes successfully
-    
+
 
     obj = tc.to_object()
 

@@ -4,12 +4,12 @@ import struct
 
 import pytest
 
-from kafka.protocol.api import RequestHeader
-from kafka.protocol.commit import GroupCoordinatorRequest
-from kafka.protocol.fetch import FetchRequest, FetchResponse
-from kafka.protocol.message import Message, MessageSet, PartialMessage
-from kafka.protocol.metadata import MetadataRequest
-from kafka.protocol.types import Int16, Int32, Int64, String, UnsignedVarInt32, CompactString, CompactArray, CompactBytes
+from kafka3.protocol.api import RequestHeader
+from kafka3.protocol.commit import GroupCoordinatorRequest
+from kafka3.protocol.fetch import FetchRequest, FetchResponse
+from kafka3.protocol.message import Message, MessageSet, PartialMessage
+from kafka3.protocol.metadata import MetadataRequest
+from kafka3.protocol.types import Int16, Int32, Int64, String, UnsignedVarInt32, CompactString, CompactArray, CompactBytes
 
 
 def test_create_message():

@@ -1,8 +1,8 @@
 import abc
 import pytest
 
-from kafka.protocol.api import Request
-from kafka.protocol.api import Response
+from kafka3.protocol.api import Request
+from kafka3.protocol.api import Response
 
 
 attr_names = [n for n in dir(Request) if isinstance(getattr(Request, n), abc.abstractproperty)]

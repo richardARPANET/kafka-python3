@@ -10,13 +10,13 @@ import time
 import uuid
 
 import py
-from kafka.vendor.six.moves import urllib, range
-from kafka.vendor.six.moves.urllib.parse import urlparse  # pylint: disable=E0611,F0401
+from kafka3.vendor.six.moves import urllib, range
+from kafka3.vendor.six.moves.urllib.parse import urlparse  # pylint: disable=E0611,F0401
 
-from kafka import errors, KafkaAdminClient, KafkaClient, KafkaConsumer, KafkaProducer
-from kafka.errors import InvalidReplicationFactorError
-from kafka.protocol.admin import CreateTopicsRequest
-from kafka.protocol.metadata import MetadataRequest
+from kafka3 import errors, KafkaAdminClient, KafkaClient, KafkaConsumer, KafkaProducer
+from kafka3.errors import InvalidReplicationFactorError
+from kafka3.protocol.admin import CreateTopicsRequest
+from kafka3.protocol.metadata import MetadataRequest
 from test.testutil import env_kafka_version, random_string
 from test.service import ExternalService, SpawnedService
 

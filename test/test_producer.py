@@ -5,8 +5,8 @@ import threading
 
 import pytest
 
-from kafka import KafkaConsumer, KafkaProducer, TopicPartition
-from kafka.producer.buffer import SimpleBufferPool
+from kafka3 import KafkaConsumer, KafkaProducer, TopicPartition
+from kafka3.producer.buffer import SimpleBufferPool
 from test.testutil import env_kafka_version, random_string
 
 

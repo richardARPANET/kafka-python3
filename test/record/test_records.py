@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 import pytest
-from kafka.record import MemoryRecords, MemoryRecordsBuilder
-from kafka.errors import CorruptRecordException
+from kafka3.record import MemoryRecords, MemoryRecordsBuilder
+from kafka3.errors import CorruptRecordException
 
 # This is real live data from Kafka 11 broker
 record_batch_data_v2 = [

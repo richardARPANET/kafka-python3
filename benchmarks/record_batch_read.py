@@ -7,7 +7,7 @@ import random
 
 import pyperf
 
-from kafka.record.memory_records import MemoryRecords, MemoryRecordsBuilder
+from kafka3.record.memory_records import MemoryRecords, MemoryRecordsBuilder
 
 
 DEFAULT_BATCH_SIZE = 1600 * 1024

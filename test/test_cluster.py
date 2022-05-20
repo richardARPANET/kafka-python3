@@ -3,8 +3,8 @@ from __future__ import absolute_import
 
 import pytest
 
-from kafka.cluster import ClusterMetadata
-from kafka.protocol.metadata import MetadataResponse
+from kafka3.cluster import ClusterMetadata
+from kafka3.protocol.metadata import MetadataResponse
 
 
 def test_empty_broker_list():

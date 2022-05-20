@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 from __future__ import print_function
 import pyperf
-from kafka.vendor import six
+from kafka3.vendor import six
 
 
 test_data = [

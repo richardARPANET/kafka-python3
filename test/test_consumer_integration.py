@@ -3,11 +3,11 @@ import time
 
 from mock import patch
 import pytest
-from kafka.vendor.six.moves import range
+from kafka3.vendor.six.moves import range
 
-import kafka.codec
-from kafka.errors import UnsupportedCodecError, UnsupportedVersionError
-from kafka.structs import TopicPartition, OffsetAndTimestamp
+import kafka3.codec
+from kafka3.errors import UnsupportedCodecError, UnsupportedVersionError
+from kafka3.structs import TopicPartition, OffsetAndTimestamp
 
 from test.testutil import Timer, assert_message_count, env_kafka_version, random_string
 
@@ -52,7 +52,7 @@ def test_kafka_consumer_unsupported_encoding(
     producer.close()
 
     # Consume, but with the related compression codec not available
-    with patch.object(kafka.codec, "has_gzip") as mocked:
+    with patch.object(kafka3.codec, "has_gzip") as mocked:
         mocked.return_value = False
         consumer = kafka_consumer_factory(auto_offset_reset='earliest')
         error_msg = "Libraries for gzip compression codec not found"
