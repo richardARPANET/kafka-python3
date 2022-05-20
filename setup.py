@@ -3,10 +3,6 @@ import sys
 
 from setuptools import setup, Command, find_packages
 
-# Pull version from source without importing
-# since we can't import something we haven't built yet :)
-exec(open('kafka/version.py').read())
-
 
 class Tox(Command):
 
