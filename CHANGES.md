@@ -1,4 +1,4 @@
-# 2.0.2 (Sep 29, 2020)
+3.0.0 (2022-05-20)
 
 Consumer
 * KIP-54: Implement sticky partition assignment strategy (aynroot / PR #2057)
