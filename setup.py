@@ -33,7 +33,7 @@ with open(os.path.join(here, 'README.rst')) as f:
 
 setup(
     name="kafka-python3",
-    version=__version__,
+    version='3.0.0.dev0',
 
     tests_require=test_require,
     extras_require={
